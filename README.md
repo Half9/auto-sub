@@ -11,7 +11,7 @@ $ docker build -t auto-sub .
 ```
 
 
-You can also obtain it via:
+You can also obtain it with:
 ```
 docker pull wilcoe/auto-sub
 ```
@@ -30,3 +30,8 @@ $ docker run -d --name="auto-sub" -v /storage/media/tvseries:/tv -p 8083:8083 wi
 Start the docker instance and it will stay as a daemon and listen on port 8083.
 
 Browse to: ```http://*ipaddress*:8083```
+
+
+to access the container please use
+
+docker exec -it container_id /bin/bash
