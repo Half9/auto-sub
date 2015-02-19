@@ -20,7 +20,6 @@ RUN rm -rf /etc/ld.so.cache \
 
 EXPOSE 8083
 
-VOLUME /data
 VOLUME /tv
 
 WORKDIR /opt/auto-sub
