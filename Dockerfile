@@ -3,13 +3,13 @@ FROM centos:centos7
 MAINTAINER Wilco Eliveld <wilcoeliveld@gmail.com>
 
 RUN yum -y install \
-	mercurial \
+	git \
 	python-cheetah \
 	&& rm -rf /var/cache/yum/* \
 	&& yum clean all
 
 RUN mkdir /opt/auto-sub
-RUN hg clone https://code.google.com/p/autosub-bootstrapbill /opt/auto-sub
+RUN git clone https://github.com/Donny87/autosub-bootstrapbill.git /opt/auto-sub
 
 ADD config/config.properties /opt/auto-sub/
 
