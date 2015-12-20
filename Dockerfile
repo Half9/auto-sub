@@ -9,7 +9,7 @@ RUN yum -y install \
 	&& yum clean all
 
 RUN mkdir /opt/auto-sub
-RUN git clone https://github.com/Donny87/autosub-bootstrapbill.git /opt/auto-sub
+RUN git clone https://github.com/BenjV/autosub-bootstrapbill.git /opt/auto-sub
 
 ADD config/config.properties /opt/auto-sub/
 
