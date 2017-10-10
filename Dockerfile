@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-MAINTAINER Wilco Eliveld <wilcoeliveld@gmail.com>
+MAINTAINER Gebruiker 2 <user2@gmail.com>
 
 RUN yum -y install \
 	git \
