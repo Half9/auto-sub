@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-MAINTAINER Gebruiker 2 <user2@gmail.com>
+MAINTAINER Wilco Eliveld <wilcoeliveld@gmail.com>
 
 RUN yum -y install \
 	git \
@@ -11,6 +11,8 @@ RUN yum -y install \
 RUN mkdir /opt/auto-sub
 RUN git clone https://github.com/BenjV/autosub.git /opt/auto-sub
 
+ADD config/config.properties /opt/auto-sub/
+
 RUN rm -rf /etc/ld.so.cache \ 
 	; rm -rf /sbin/sln \
 	; rm -rf /usr/{{lib,share}/locale,share/{man,doc,info,gnome/help,cracklib,il8n},{lib,lib64}/gconv,bin/localedef,sbin/build-locale-archive} \
@@ -19,6 +21,7 @@ RUN rm -rf /etc/ld.so.cache \
 EXPOSE 8083
 
 VOLUME /tv
+VOLUME /config
 
 WORKDIR /opt/auto-sub
 CMD python AutoSub.py
