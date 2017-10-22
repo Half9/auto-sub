@@ -21,7 +21,6 @@ RUN rm -rf /etc/ld.so.cache \
 EXPOSE 8083
 
 VOLUME /tv
-VOLUME /config
 
 WORKDIR /opt/auto-sub
 CMD python AutoSub.py
